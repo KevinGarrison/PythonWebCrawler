@@ -6,7 +6,7 @@ def web_crawler(main_url: str, sub_urls: list, element: str, attr_name: list) ->
     """
     :param main_url: main url for the web page
     :param sub_urls: list of sub urls for subpages for scraping
-    :param element: html element
+    :param element: html element (tags)
     :param attr_name: list containing attribute name and value
     :return: List containing the content
     """
