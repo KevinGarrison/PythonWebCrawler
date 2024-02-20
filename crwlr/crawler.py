@@ -25,8 +25,6 @@ def web_crawler(main_url: str, sub_urls: list, element: str, attr_name: list) ->
                 print('Request ' + str(index) + ' successful')
                 soup = BeautifulSoup(r.text, "lxml")
                 # Find the element based on the attribute name and value
-                #names.append(soup.find_all(element, itemprop=attr_name[0])
-                #descriptions.append(soup.find_all(element, itemprop=attr_name[1]))
                 names.extend([element.get_text(strip=True) for element in soup.find_all(element, itemprop=attr_name[0])])
                 descriptions.extend([element.get_text(strip=True) for element in soup.find_all(element, itemprop=attr_name[1])])
             else:
